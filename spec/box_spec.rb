@@ -4,7 +4,8 @@ describe 'A box' do
 
   describe 'attributes' do
     it 'has tiles' do
-      skip
+      box = Box.new
+      expect(box).to have_tiles
     end
   end
 
