@@ -49,7 +49,7 @@ describe 'A command' do
     # A command with a digit set of '6' would result in the tile values [6].
     it 'is an array of integers representing the text digit set' do
       command_with_digit_set = Command.new('1 2 3')
-      skip
+      expect(command_with_digit_set.to_tile_values).to match_array([1, 2, 3])
     end
   end
 
