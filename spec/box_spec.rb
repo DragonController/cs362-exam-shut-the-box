@@ -52,7 +52,9 @@ describe 'A box' do
 
   describe '#shut?' do
     it 'is true when there are no tiles remaining' do
-      skip
+      box = Box.new
+      box.flip(1..9)
+      expect(box).to be_shut
     end
     it 'is false when there are tiles remaining' do
       skip
