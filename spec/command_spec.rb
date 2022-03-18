@@ -110,7 +110,8 @@ describe 'A command' do
   describe '#valid?' do
     context "when it is the 'give up' command" do
       it 'returns true' do
-        skip
+        command = Command.new('g')
+        expect(command).to be_valid([1, 2, 3, 4, 5, 6, 7, 8, 9], 45)
       end
     end
 
