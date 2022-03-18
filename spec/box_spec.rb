@@ -32,7 +32,9 @@ describe 'A box' do
       expect(box).to be_tiles_remaining
     end
     it 'returns false when none of the tiles are up' do
-      skip
+      box = Box.new
+      box.flip(1..9)
+      expect(box).to_not be_tiles_remaining
     end
   end
 
