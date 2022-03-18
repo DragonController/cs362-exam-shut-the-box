@@ -1,23 +1,27 @@
 require_relative '../lib/box'
+require_relative '../lib/tile'
 
 describe 'A box' do
 
   describe 'attributes' do
     it 'has tiles' do
       box = Box.new
-      expect(box).to have_tiles
+      expect(box).to be_tiles_remaining
     end
   end
 
   describe 'creation' do
     context 'by default' do
       it 'will initialize an array of tiles' do
-        skip
+        box = Box.new
+        expect(box).to be_tiles_remaining
       end
     end
     context 'with a specific array of tiles' do
       it 'will retain the tiles passed its constructor' do
-        skip
+        tiles = (1..9).map { |n| Tile.new(n) }
+        box = Box.new(tiles)
+        expect(box.tiles).to match_array(tiles)
       end
     end
   end
