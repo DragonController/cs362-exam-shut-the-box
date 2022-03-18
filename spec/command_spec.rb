@@ -59,7 +59,7 @@ describe 'A command' do
     # the total of the face value of dice rolled.
     it 'is a sum of the values in the digit set' do
       command_with_digit_set = Command.new('1 2 3')
-      skip
+      expect(command_with_digit_set.sum).to eq(6)
     end
   end
 
