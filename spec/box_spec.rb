@@ -6,7 +6,7 @@ describe 'A box' do
   describe 'attributes' do
     it 'has tiles' do
       box = Box.new
-      expect(box).to be_tiles_remaining
+      expect(box.tiles).to_not be_empty
     end
   end
 
@@ -14,7 +14,7 @@ describe 'A box' do
     context 'by default' do
       it 'will initialize an array of tiles' do
         box = Box.new
-        expect(box).to be_tiles_remaining
+        expect(box.tiles).to_not be_empty
       end
     end
     context 'with a specific array of tiles' do
