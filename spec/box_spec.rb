@@ -87,7 +87,10 @@ describe 'A box' do
     # And tile 2 is down,
     # The string representation is [1][ ][3][4].
     it "is each tile value in brackets with blanks for tiles that are down" do
-      skip
+      tiles = (1..4).map { |n| Tile.new(n) }
+      box = Box.new(tiles)
+      box.flip(2..2)
+      expect(box.to_s).to eq("[1][ ][3][4]")
     end
   end
 end
