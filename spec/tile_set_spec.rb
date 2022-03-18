@@ -11,7 +11,8 @@ describe 'A tile set' do
     end
 
     it 'returns an array of tiles of a specified length' do
-      skip
+      tile_set = TileSet.generate(8)
+      expect(tile_set.size).to be(8)
     end
 
     it 'returns an array of tiles whose values increase from 1, by 1' do
