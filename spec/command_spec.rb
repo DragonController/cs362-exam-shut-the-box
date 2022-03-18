@@ -4,7 +4,8 @@ describe 'A command' do
 
   describe 'attributes' do
     it 'has text' do
-      skip
+      command = Command.new("test")
+      expect(command.text).to_not be_empty
     end
   end
 
