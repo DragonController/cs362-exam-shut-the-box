@@ -40,7 +40,9 @@ describe 'A box' do
 
   describe '#no_tiles_remaining?' do
     it 'returns true when none of the tiles are up' do
-      skip
+      box = Box.new
+      box.flip(1..9)
+      expect(box).to be_no_tiles_remaining
     end
     it 'returns false when any tile is up' do
       skip
