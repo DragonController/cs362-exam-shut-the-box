@@ -52,7 +52,7 @@ describe 'A box' do
 
   describe '#shut?' do
     it 'is true when there are no tiles remaining' do
-      box = Box.new
+      box = Box.new()
       box.flip(1..9)
       expect(box).to be_shut
     end
@@ -71,10 +71,14 @@ describe 'A box' do
 
   describe '#flip' do
     it 'flips each tile whose value matches any of the tile values it receives' do
-      skip
+      box = Box.new
+      box.flip(1..9)
+      expect(box).to be_shut
     end
     it 'does not flip any tile whose value does not match any of the tile values it receives' do
-      skip
+      box = Box.new
+      box.flip(1..8)
+      expect(box.total_value_of_remaining_tiles).to eq(9)
     end
   end
 
