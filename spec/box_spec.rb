@@ -57,7 +57,8 @@ describe 'A box' do
       expect(box).to be_shut
     end
     it 'is false when there are tiles remaining' do
-      skip
+      box = Box.new
+      expect(box).to_not be_shut
     end
   end
 
