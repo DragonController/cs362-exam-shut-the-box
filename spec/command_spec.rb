@@ -18,7 +18,8 @@ describe 'A command' do
     end
     context "when the command is not Command::GIVE_UP" do
       it 'returns false' do
-        skip
+        command = Command.new("test")
+        expect(command).to_not be_give_up
       end
     end
   end
