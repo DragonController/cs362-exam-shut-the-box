@@ -32,7 +32,7 @@ describe 'A command' do
     context "when the command is a digit set" do
       it 'returns true' do
         command_with_digit_set = Command.new('1 2 3')
-        skip
+        expect(command_with_digit_set).to be_digit_set
       end
     end
     context "when the command is not a digit set" do
